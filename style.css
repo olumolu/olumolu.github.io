@@ -1,0 +1,102 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+/* Main box styles */
+.main-box {
+    resize: both;
+    overflow: auto;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 40px auto;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 12px;
+    border-radius: 12px 12px 0 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Input field styles */
+.input-field {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.input-field input[type="text"] {
+    padding: 12px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.send-button {
+    padding: 12px 20px;
+    border-radius: 0 8px 8px 0;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: calc(100% - 12px);
+    height: 40px;
+    margin-left: -1px;
+}
+
+.send-button:hover {
+    background-color: #444;
+}
+
+/* Response area styles */
+.response-area {
+    padding: 16px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    animation: bounce 0.5s ease-in-out;
+}
+
+.response-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
