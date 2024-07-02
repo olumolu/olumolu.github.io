@@ -1,4 +1,4 @@
-/* styles.css */
+/*styles.css*/
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f7f7f7;
@@ -34,11 +34,11 @@ body.dark-mode h1 {
 }
 
 #dark-mode-toggle {
-    margin-bottom: 20px; /* add 20px space between toggle dark mode button and form */
+    margin-bottom: 10px; /* reduced margin to 10px */
 }
 
 form {
-    margin-top: 20px; /* add 20px space between dark mode button and form */
+    margin-top: 10px; /* reduced margin to 10px */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +51,7 @@ input[type="text"] {
     border-radius: 10px;
     width: 100%;
     transition: background-color 0.5s ease, color 0.5s ease;
-    margin-bottom: 10px; /* reduced margin to reduce space between write area and send button */
+    margin-bottom: 10px; /* reduced margin to 10px */
 }
 
 body.dark-mode input[type="text"] {
@@ -67,7 +67,7 @@ body.dark-mode input[type="text"] {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.5s ease;
-    margin-bottom: 5px; /* reduced margin to reduce space between send button and response area */
+    margin-bottom: 10px; /* reduced margin to 10px */
 }
 
 body.dark-mode .rounded-button {
@@ -83,13 +83,19 @@ body.dark-mode .rounded-button:hover {
 }
 
 #response {
-    margin-top: 5px; /* reduced margin to reduce space between send button and response area */
-    font-size: 16px;
-    color: #666;
-    transition: color 0.5s ease;
     padding: 10px;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    overflow-y: auto;
+    max-height: 150px; /* adjust the max height to your liking */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-bottom: 5px;
+    margin-bottom: 10px; /* reduced margin to 10px */
 }
 
 body.dark-mode #response {
@@ -99,20 +105,20 @@ body.dark-mode #response {
 
 #loading-animation {
     display: flex;
-    justify-content: center; /* added to center align the animation */
+    justify-content: center;
     align-items: center;
-    margin-top: 5px; /* reduced margin to reduce space between send button and response area */
+    margin-top: 10px; /* reduced margin to 10px */
 }
 
 .spinner {
-    width: 100px; /* increased width and height to enlarge the animation */
-    height: 100px;
+    width: 120px;
+    height: 120px;
     position: relative;
     margin: 0 auto;
 }
 
 .bounce1, .bounce2, .bounce3 {
-    width: 20px; /* increased width and height to enlarge the animation */
+    width: 20px;
     height: 20px;
     background-color: #4CAF50;
     border-radius: 100%;
