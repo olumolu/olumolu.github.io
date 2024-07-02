@@ -14,7 +14,8 @@ body {
 }
 
 .main-box {
-    resize: both;
+    /* Commenting out the resize part */
+    /* resize: both; */
     overflow: auto;
     padding: 16px;
     border-radius: 12px;
@@ -53,17 +54,23 @@ header h1 {
     font-size: 16px;
 }
 
+/* Send button styles */
 .send-button {
-    padding: 8px 16px;
-    border-radius: 0 8px 8px 0;
-    background-color: #333;
+    padding: 12px; /* Adjust padding as needed */
+    border-radius: 50%; /* Make the button circular */
+    background-color: #007bff; /* WhatsApp-like blue color */
     color: #fff;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content vertically and horizontally */
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
 .send-button:hover {
-    background-color: #444;
+    background-color: #0056b3; /* Darker shade of blue on hover */
 }
 
 /* Response area styles */
