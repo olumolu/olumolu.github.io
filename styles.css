@@ -27,18 +27,15 @@ h1 {
     margin-top: 0;
     color: #333;
     transition: color 0.5s ease;
+    text-align: center; /* added */
 }
 
 body.dark-mode h1 {
     color: #fff;
 }
 
-#dark-mode-toggle {
-    margin-bottom: 10px; /* reduced margin to 10px */
-}
-
 form {
-    margin-top: 10px; /* reduced margin to 10px */
+    margin-top: 20px; /* increased margin to 20px */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +48,7 @@ input[type="text"] {
     border-radius: 10px;
     width: 100%;
     transition: background-color 0.5s ease, color 0.5s ease;
-    margin-bottom: 10px; /* reduced margin to 10px */
+    margin-bottom: 20px; /* increased margin to 20px */
 }
 
 body.dark-mode input[type="text"] {
@@ -67,7 +64,7 @@ body.dark-mode input[type="text"] {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.5s ease;
-    margin-bottom: 10px; /* reduced margin to 10px */
+    margin-bottom: 20px; /* increased margin to 20px */
 }
 
 body.dark-mode .rounded-button {
@@ -95,7 +92,7 @@ body.dark-mode .rounded-button:hover {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     padding-bottom: 5px;
-    margin-bottom: 10px; /* reduced margin to 10px */
+    margin-bottom: 20px; /* increased margin to 20px */
 }
 
 body.dark-mode #response {
@@ -107,7 +104,7 @@ body.dark-mode #response {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px; /* reduced margin to 10px */
+    margin-top: 20px; /* increased margin to 20px */
 }
 
 .spinner {
