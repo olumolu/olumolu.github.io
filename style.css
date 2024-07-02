@@ -89,24 +89,15 @@ header h1 {
 /* Custom Send Icon */
 .send-icon {
     display: inline-block;
-    width: 40px; /* Adjust size as needed */
-    height: 40px; /* Adjust size as needed */
-    background-color: #007bff; /* WhatsApp-like blue color */
-    color: #fff; /* Icon color */
-    border-radius: 50%; /* Rounded shape */
-    text-align: center;
-    line-height: 40px; /* Center content vertically */
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent; /* Adjust size as needed */
+    border-right: 20px solid transparent; /* Adjust size as needed */
+    border-bottom: 40px solid #007bff; /* WhatsApp-like blue color */
     cursor: pointer;
     transition: background-color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
 }
 
 .send-icon:hover {
-    background-color: #0056b3; /* Darker shade of blue on hover */
-}
-
-.send-icon:before {
-    content: '→'; /* Arrow symbol */
-    font-weight: bold; /* Make the arrow bold if necessary */
-    font-size: 24px; /* Adjust size of the arrow */
+    border-bottom-color: #0056b3; /* Darker shade of blue on hover */
 }
