@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.chat-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.chat-input {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.chat-input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-messages {
+    padding: 20px;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.chat-message .username {
+    font-weight: bold;
+    color: #333;
+}
+
+.chat-message .message {
+    color: #666;
+}
+
+/* added styles for the send button */
+.send-button {
+    background-color: #4CAF50; /* green */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #3e8e41; /* darker green on hover */
+}
+
+.send-button:active {
+    background-color: #4CAF50; /* green on active */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
