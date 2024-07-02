@@ -67,7 +67,7 @@ body.dark-mode input[type="text"] {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.5s ease;
-    margin-bottom: 10px; /* reduced margin to reduce space between send button and response area */
+    margin-bottom: 5px; /* reduced margin to reduce space between send button and response area */
 }
 
 body.dark-mode .rounded-button {
@@ -83,7 +83,7 @@ body.dark-mode .rounded-button:hover {
 }
 
 #response {
-    margin-top: 10px; /* reduced margin to reduce space between send button and response area */
+    margin-top: 5px; /* reduced margin to reduce space between send button and response area */
     font-size: 16px;
     color: #666;
     transition: color 0.5s ease;
@@ -101,12 +101,12 @@ body.dark-mode #response {
     display: flex;
     justify-content: center; /* added to center align the animation */
     align-items: center;
-    margin-top: 10px; /* reduced margin to reduce space between send button and response area */
+    margin-top: 5px; /* reduced margin to reduce space between send button and response area */
 }
 
 .spinner {
-    width: 120px; /* increased width and height to enlarge the animation */
-    height: 120px;
+    width: 100px; /* increased width and height to enlarge the animation */
+    height: 100px;
     position: relative;
     margin: 0 auto;
 }
