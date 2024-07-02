@@ -14,8 +14,6 @@ body {
 }
 
 .main-box {
-    /* Commenting out the resize part */
-    /* resize: both; */
     overflow: auto;
     padding: 16px;
     border-radius: 12px;
@@ -54,6 +52,21 @@ header h1 {
     font-size: 16px;
 }
 
+/* Send button styles */
+.send-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px 0 0 8px;
+}
+
+.send-button:hover {
+    background-color: #0056b3;
+}
+
 /* Response area styles */
 .response-area {
     padding: 16px;
@@ -82,22 +95,7 @@ header h1 {
     }
     100% {
         transform: translateY(0);
-        opacity: 1;
+        opacity:
+            1;
     }
-}
-
-/* Custom Send Icon */
-.send-icon {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent; /* Adjust size as needed */
-    border-right: 20px solid transparent; /* Adjust size as needed */
-    border-bottom: 40px solid #007bff; /* WhatsApp-like blue color */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.send-icon:hover {
-    border-bottom-color: #0056b3; /* Darker shade of blue on hover */
 }
