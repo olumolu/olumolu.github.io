@@ -18,9 +18,10 @@ sendButton.addEventListener('click', (e) => {
     } else {
         loadingAnimation.classList.remove('hidden');
         setTimeout(() => {
-            responseDiv.innerText = 'this is dodollama show dodo';
+            responseDiv.innerText = message; // echo the user's input
             loadingAnimation.classList.add('hidden');
         }, 1000); // simulate a 1.0 second delay
     }
     messageInput.value = '';
-});
+}
+        );
