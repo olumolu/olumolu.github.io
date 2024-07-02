@@ -51,22 +51,27 @@ body {
 }
 
 /* added styles for the send button */
-.send-button {
-    background-image: linear-gradient(to right, #ff9900, #ff3737);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
+.message-submit-button {
+  /* Use a more accessible color scheme */
+  background-image: linear-gradient(to right, #007bff, #ffffff);
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
 }
 
-.send-button:hover {
-    background-image: linear-gradient(to right, #ffa07a, #ff6347);
+.message-submit-button:hover {
+  background-image: linear-gradient(to right, #0069d9, #ffffff);
 }
 
-.send-button:active {
-    background-image: linear-gradient(to right, #ff9900, #ff3737);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.message-submit-button:active {
+  background-image: linear-gradient(to right, #007bff, #ffffff);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-submit-button:focus {
+  /* Add a focus state */
+  box-shadow: 0 0 0 2px #007bff;
+  outline: none;
 }
