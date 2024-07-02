@@ -33,6 +33,19 @@ sendBtn.addEventListener('click', () => {
 function customResponse(input) {
   if (input.toLowerCase() === 'hi') {
     return 'Hello!';
+  } else if (input.toLowerCase() === 'hello') {
+    return 'Hi there!';
+  } else if (input.toLowerCase() === 'how are you') {
+    return 'I\'m doing well, thanks!';
+  } else if (input.toLowerCase() === 'what is your name') {
+    return 'I don\'t have a personal name, but you can call me Assistant! pleople call me ass';
+  } else if (input.toLowerCase() === 'goodbye') {
+    return 'See you later!';
+  } else if (input.toLowerCase() === 'thanks') {
+    return 'You\'re welcome!';
+  } else if (input.toLowerCase().startsWith('hi my name is')) {
+    const name = input.substring(13).trim();
+    return `Hi ${name}!`;
   }
   return null;
 }
