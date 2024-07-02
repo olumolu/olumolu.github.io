@@ -1,4 +1,3 @@
-//script.js
 const userInput = document.getElementById('user-input');
 const sendBtn = document.getElementById('send-btn');
 const responseContainer = document.getElementById('response-container');
@@ -10,11 +9,26 @@ sendBtn.addEventListener('click', () => {
 
   if (userInputValue === '') {
     messages.push('That is blank😅');
-  } else if (customResponse(userInputValue)) {
-    // If customResponse returns a truthy value, use that as the response
-    messages.push(customResponse(userInputValue));
   } else {
-    messages.push(userInputValue);
+    // Send the input to the AI model and get the response
+    fetch('https://api.duckduckgo.com/html/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: `q=${encodeURIComponent(userInputValue)}`
+    })
+    .then(response => response.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const responseText = doc.body.textContent.trim();
+      messages.push(responseText);
+    })
+    .catch(error => {
+      console.error(error);
+      messages.push('Error: unable to get response from AI model');
+    });
   }
 
   userInput.value = '';
@@ -30,9 +44,3 @@ sendBtn.addEventListener('click', () => {
 
   messages = messages.slice(-maxMessages);
 });
-function customResponse(input) {
-  if (input === 'hi') {
-    return 'Hello!';
-  }
-  return null;
-}
