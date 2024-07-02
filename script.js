@@ -1,3 +1,4 @@
+//script.js
 const userInput = document.getElementById('user-input');
 const sendBtn = document.getElementById('send-btn');
 const responseContainer = document.getElementById('response-container');
@@ -29,3 +30,9 @@ sendBtn.addEventListener('click', () => {
 
   messages = messages.slice(-maxMessages);
 });
+function customResponse(input) {
+  if (input === 'hi') {
+    return 'Hello!';
+  }
+  return null;
+}
