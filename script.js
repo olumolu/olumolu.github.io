@@ -14,13 +14,13 @@ sendButton.addEventListener('click', (e) => {
     e.preventDefault();
     const message = messageInput.value.trim();
     if (message === '') {
-        responseDiv.innerText = '😊';
+        responseDiv.innerText = 'that is blank 😊';
     } else {
         loadingAnimation.classList.remove('hidden');
         setTimeout(() => {
-            responseDiv.innerText = 'Hi, thanks for contacting me! I will help build a better world, plant trees!';
+            responseDiv.innerText = 'this is dodollama show dodo';
             loadingAnimation.classList.add('hidden');
-        }, 1500); // simulate a 1.5 second delay
+        }, 1000); // simulate a 1.0 second delay
     }
     messageInput.value = '';
 });
