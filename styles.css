@@ -92,8 +92,10 @@ body.dark-mode .rounded-button:hover {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     padding-bottom: 5px;
-    margin-bottom: 20px; /* increased margin to 20px */
+    margin: 20px; /* added margin to keep it within the container */
+    box-sizing: border-box; /* added to include padding in width calculation */
 }
+
 
 body.dark-mode #response {
     color: #fff;
