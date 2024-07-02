@@ -54,25 +54,6 @@ header h1 {
     font-size: 16px;
 }
 
-/* Send button styles */
-.send-button {
-    padding: 12px; /* Adjust padding as needed */
-    border-radius: 50%; /* Make the button circular */
-    background-color: #007bff; /* WhatsApp-like blue color */
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center content vertically and horizontally */
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-}
-
-.send-button:hover {
-    background-color: #0056b3; /* Darker shade of blue on hover */
-}
-
 /* Response area styles */
 .response-area {
     padding: 16px;
@@ -103,4 +84,29 @@ header h1 {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+/* Custom Send Icon */
+.send-icon {
+    display: inline-block;
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    background-color: #007bff; /* WhatsApp-like blue color */
+    color: #fff; /* Icon color */
+    border-radius: 50%; /* Rounded shape */
+    text-align: center;
+    line-height: 40px; /* Center content vertically */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+}
+
+.send-icon:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+.send-icon:before {
+    content: '→'; /* Arrow symbol */
+    font-weight: bold; /* Make the arrow bold if necessary */
+    font-size: 24px; /* Adjust size of the arrow */
 }
