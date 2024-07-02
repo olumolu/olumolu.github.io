@@ -4,51 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OLLA Chatbot</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-        .chat-container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .chat-header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        .chat-input {
-            padding: 10px;
-            width: 100%;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-        }
-        .chat-input:focus {
-            outline: none;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .chat-messages {
-            padding: 20px;
-        }
-        .chat-message {
-            margin-bottom: 10px;
-        }
-        .chat-message .username {
-            font-weight: bold;
-            color: #333;
-        }
-        .chat-message .message {
-            color: #666;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- added a separate CSS file -->
 </head>
 <body>
     <div class="chat-container">
@@ -57,41 +13,13 @@
         </div>
         <div class="chat-input-container">
             <input type="text" id="user-input" class="chat-input" placeholder="Type a message...">
-            <button id="send-button">Send</button>
+            <button id="send-button" class="send-button">Send</button> <!-- added a class to the button -->
         </div>
         <div class="chat-messages">
             <div id="message-container"></div>
         </div>
     </div>
 
-    <script>
-        const userInput = document.getElementById("user-input");
-        const sendButton = document.getElementById("send-button");
-        const messageContainer = document.getElementById("message-container");
-
-        sendButton.addEventListener("click", async () => {
-            const input = userInput.value.trim();
-            if (input !== "") {
-                userInput.value = "";
-                const response = await fetch(`https://your-ollama-server-ip:port/chat`, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ input }),
-                });
-                const responseData = await response.json();
-                const messageHTML = `
-                    <div class="chat-message">
-                        <span class="username">You:</span>
-                        <span class="message">${input}</span>
-                    </div>
-                    <div class="chat-message">
-                        <span class="username">OLLA:</span>
-                        <span class="message">${responseData.response}</span>
-                    </div>
-                `;
-                messageContainer.innerHTML += messageHTML;
-            }
-        });
-    </script>
+    <script src="script.js"></script> <!-- added a separate JavaScript file -->
 </body>
 </html>
