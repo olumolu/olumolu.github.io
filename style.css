@@ -55,14 +55,14 @@ header h1 {
 }
 
 .send-button {
-    padding: 12px 20px;
+    padding: 12px;
     border-radius: 0 8px 8px 0;
     background-color: #333;
     color: #fff;
     border: none;
     cursor: pointer;
-    width: calc(100% - 12px);
-    height: 40px;
+    width: calc(100% - 24px); /* adjusted width to match input field */
+    height: 40px; /* kept height same as before */
     margin-left: -1px;
 }
 
