@@ -4,31 +4,16 @@ const responseContainer = document.getElementById('response-container');
 const maxMessages = 5;
 const messages = [];
 
-const responses = {
-  "hi": "Hello!",
-  "hello": "Hi there!",
-  "how are you": "I'm doing well, thanks!",
-  "what is your name": "I don't have a personal name, but you can call me Assistant!",
-  "goodbye": "See you later!",
-  "thanks": "You're welcome!",
-  "introduction": (input) => {
-    const name = input.replace("hi my name is", "").trim();
-    return `Hi ${name}!`;
-  }
-};
-
 sendBtn.addEventListener('click', () => {
   const userInputValue = userInput.value.trim();
 
   if (userInputValue === '') {
     messages.push('That is blank😅');
+  } else if (customResponse(userInputValue)) {
+    // If customResponse returns a truthy value, use that as the response
+    messages.push(customResponse(userInputValue));
   } else {
-    const response = customResponse(userInputValue);
-    if (response) {
-      messages.push(response);
-    } else {
-      messages.push(`I didn't understand that. Try saying hello or goodbye!`);
-    }
+    messages.push(userInputValue);
   }
 
   userInput.value = '';
@@ -46,17 +31,23 @@ sendBtn.addEventListener('click', () => {
 });
 
 function customResponse(input) {
-  input = input.toLowerCase();
-
-  for (const key in responses) {
-    if (input.includes(key)) {
-      if (typeof responses[key] === 'function') {
-        return responses[key](input);
-      } else {
-        return responses[key];
-      }
-    }
-  }
-
+  if (input.toLowerCase() === 'hi') {
+    return 'Hello!';
+  } else if (input.toLowerCase() === 'hello') {
+    return 'Hi there!';
+  } else if (input.toLowerCase() === 'how are you') {
+    return 'I\'m doing well, thanks!';
+  } else if (input.toLowerCase() === 'what is your name') {
+    return 'I don\'t have a personal name, but you can call me Assistant! pleople call me ass';
+  } else if (input.toLowerCase() === 'goodbye') {
+    return 'See you later!';
+  } else if (input.toLowerCase() === 'thanks') {
+    return 'You\'re welcome!';
+  } else if (input.toLowerCase().startsWith('hi my name is')) {
+    const name = input.substring(13).trim();
+    return `Hi ${name}!`;
+  }else if (input.toLowerCase().startsWith('hello my name is')) {
+    const name = input.substring(13).trim();
+    return `Hi ${name}!`;
   return null;
 }
