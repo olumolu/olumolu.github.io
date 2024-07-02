@@ -46,8 +46,10 @@ function customResponse(input) {
   } else if (input.toLowerCase().startsWith('hi my name is')) {
     const name = input.substring(13).trim();
     return `Hi ${name}!`;
-  }else if (input.toLowerCase().startsWith('hello my name is')) {
+  } else if (input.toLowerCase().startsWith('hello my name is')) {
     const name = input.substring(13).trim();
     return `Hi ${name}!`;
-  return null;
+  } else {
+    return null; // or return a default response, e.g. "I didn't understand that."
+  }
 }
