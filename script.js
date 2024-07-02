@@ -1,32 +1,39 @@
-// Get the input field and send button elements
 const userInput = document.getElementById('user-input');
 const sendBtn = document.getElementById('send-btn');
 const responseContainer = document.getElementById('response-container');
+const maxMessages = 5;
+const messages = [];
 
-// Add event listener to the send button
 sendBtn.addEventListener('click', () => {
-    // Get the user input value
-    const userInputValue = userInput.value.trim();
+  const userInputValue = userInput.value.trim();
 
-    // Generate a response
-    const response = `Response: ${userInputValue}`;
+  if (userInputValue === '') {
+    messages.push('That is blank😅');
+  } else if (customResponse(userInputValue)) {
+    // If customResponse returns a truthy value, use that as the response
+    messages.push(customResponse(userInputValue));
+  } else {
+    messages.push(userInputValue);
+  }
 
-    // Create a new response area element
-    const responseArea = document.createElement('div');
-    responseArea.className = 'response-area';
+  userInput.value = '';
 
-    // Create a new response text element
-    const responseText = document.createElement('p');
-    responseText.className = 'response-text';
-    responseText.textContent = response;
+  responseContainer.innerHTML = '';
 
-    // Add the response text to the response area
-    responseArea.appendChild(responseText);
+  for (let i = 0; i < maxMessages; i++) {
+    const message = messages[messages.length - 1 - i];
+    const messageElement = document.createElement('p');
+    messageElement.textContent = message;
+    responseContainer.appendChild(messageElement);
+  }
 
-    // Add the response area to the response container
-    responseContainer.appendChild(responseArea);
-
-    // Clear the input field
-    userInput.value = 
-        '';
+  messages = messages.slice(-maxMessages);
 });
+
+function customResponse(input) {
+  const userInput = input.toLowerCase(); // convert input to lowercase
+  if (input === 'hi') {
+    return 'Hello!';
+  }
+  return null;
+}
