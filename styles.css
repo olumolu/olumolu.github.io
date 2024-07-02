@@ -71,74 +71,6 @@ body.dark-mode .rounded-button {
     background-color: #3e8e41;
 }
 
-body.dark-mode .rounded-button:hover {
-    background-color: #555;
-}
-
-#response {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #666;
-    transition: color 0.5s ease;
-}
-
-body.dark-mode #response {
-    color: #fff;
-}
-
-#loading-animation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.spinner {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    margin: 0 auto;
-}
-
-.bounce1, .bounce2, .bounce3 {
-    width: 15px;
-    height: 15px;
-    background-color: #4CAF50;
-    border-radius: 100%;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: bouncedelay 1.4s infinite ease-in-out;
-    animation-fill-mode: both;
-}
-
-body.dark-mode .bounce1, body.dark-mode .bounce2, body.dark-mode .bounce3 {
-    background-color: #666;
-}
-
-.bounce2 {
-    animation-delay: -0.32s;
-}
-
-.bounce3 {
-    animation-delay: -0.64s;
-}
-
-@keyframes bouncedelay {
-    0%, 80%, 100% {
-        transform: scale(0);
-    }
-    40% {
-        transform: scale(1);
-    }
-}
-
-.hidden {
-    display: none;
-}
-*/
-/* styles.css */
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -236,6 +168,107 @@ body.dark-mode #response {
 
 .spinner {
     width: 50px;
+*/
+/* styles.css */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f7f7f7;
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode {
+    background-color: #333;
+}
+
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode .container {
+    background-color: #444;
+}
+
+h1 {
+    margin-top: 0;
+    color: #333;
+    transition: color 0.5s ease;
+}
+
+body.dark-mode h1 {
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* add 20px space between dark mode button and form */
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    margin-bottom: 20px; /* add 20px space between write area and send button */
+}
+
+body.dark-mode input[type="text"] {
+    background-color: #555;
+    color: #fff;
+}
+
+.rounded-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode .rounded-button {
+    background-color: #666;
+}
+
+.rounded-button:hover {
+    background-color: #3e8e41;
+}
+
+body.dark-mode .rounded-button:hover {
+    background-color: #555;
+}
+
+#response {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #666;
+    transition: color 0.5s ease;
+}
+
+body.dark-mode #response {
+    color: #fff;
+}
+
+#loading-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.spinner {
+    width: 50px;
     height: 50px;
     position: relative;
     margin: 0 auto;
@@ -279,50 +312,6 @@ body.dark-mode .bounce1, body.dark-mode .bounce2, body.dark-mode .bounce3 {
     display: none;
 }
 
-/* added styles */
-
-.dark-mode-toggle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-
-.dark-mode-toggle label {
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-    background-color: #ddd;
-    border-radius: 10px;
-    position: relative;
-    transition: background-color 0.5s ease;
-}
-
-body.dark-mode .dark-mode-toggle label {
-    background-color: #666;
-}
-
-.dark-mode-toggle label::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: left 0.5s ease;
-}
-
-body.dark-mode .dark-mode-toggle label::before {
-    left: 20px;
-}
-
-.write-area {
-    margin-bottom: 20px; /* add 20px space between write area and send button */
-}
-
-.send-button {
-    margin-top: 20px; /* add 20px space between write area and send button */
-}
+#dark-mode-toggle {
+    margin-bottom: 20px; /* add 20px space between toggle dark mode button and form */
+    }
