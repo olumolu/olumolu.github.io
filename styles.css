@@ -34,11 +34,11 @@ body {
 }
 
 .chat-messages {
-    padding: 30px;
+    padding: 20px;
 }
 
 .chat-message {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .chat-message .username {
@@ -52,7 +52,7 @@ body {
 
 /* added styles for the send button */
 .send-button {
-    background-color: #4CAF50; /* green */
+    background-image: linear-gradient(to right, #ff9900, #ff3737);
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -63,10 +63,10 @@ body {
 }
 
 .send-button:hover {
-    background-color: #3e8e41; /* darker green on hover */
+    background-image: linear-gradient(to right, #ffa07a, #ff6347);
 }
 
 .send-button:active {
-    background-color: #4CAF50; /* green on active */
+    background-image: linear-gradient(to right, #ff9900, #ff3737);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
