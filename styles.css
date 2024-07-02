@@ -51,7 +51,7 @@ input[type="text"] {
     border-radius: 10px;
     width: 100%;
     transition: background-color 0.5s ease, color 0.5s ease;
-    margin-bottom: 150px; /* add 10px space between write area and send button */
+    margin-bottom: 10px; /* reduced margin to reduce space between write area and send button */
 }
 
 body.dark-mode input[type="text"] {
@@ -67,7 +67,7 @@ body.dark-mode input[type="text"] {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.5s ease;
-    margin-bottom: 20px; /* added to create space between the send button and the animation */
+    margin-bottom: 10px; /* reduced margin to reduce space between send button and response area */
 }
 
 body.dark-mode .rounded-button {
@@ -83,21 +83,25 @@ body.dark-mode .rounded-button:hover {
 }
 
 #response {
-    margin-top: 20px;
+    margin-top: 10px; /* reduced margin to reduce space between send button and response area */
     font-size: 16px;
     color: #666;
     transition: color 0.5s ease;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
 }
 
 body.dark-mode #response {
     color: #fff;
+    background-color: #444;
 }
 
 #loading-animation {
     display: flex;
     justify-content: center; /* added to center align the animation */
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px; /* reduced margin to reduce space between send button and response area */
 }
 
 .spinner {
