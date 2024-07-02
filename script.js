@@ -29,11 +29,3 @@ sendBtn.addEventListener('click', () => {
 
   messages = messages.slice(-maxMessages);
 });
-
-function customResponse(input) {
-  const userInput = input.toLowerCase(); // convert input to lowercase
-  if (input === 'hi') {
-    return 'Hello!';
-  }
-  return null;
-}
