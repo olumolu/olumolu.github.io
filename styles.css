@@ -34,11 +34,11 @@ body {
 }
 
 .chat-messages {
-    padding: 20px;
+    padding: 30px;
 }
 
 .chat-message {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .chat-message .username {
@@ -58,6 +58,8 @@ body {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
 }
 
 .send-button:hover {
