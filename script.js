@@ -1,3 +1,35 @@
+const userInput = document.getElementById('user-input');
+const sendBtn = document.getElementById('send-btn');
+const responseContainer = document.getElementById('response-container');
+const maxMessages = 5;
+const messages = [];
+
+sendBtn.addEventListener('click', () => {
+  const userInputValue = userInput.value.trim();
+
+  if (userInputValue === '') {
+    messages.push('That is blank😅');
+  } else if (customResponse(userInputValue)) {
+    // If customResponse returns a truthy value, use that as the response
+    messages.push(customResponse(userInputValue));
+  } else {
+    messages.push(userInputValue);
+  }
+
+  userInput.value = '';
+
+  responseContainer.innerHTML = '';
+
+  for (let i = 0; i < maxMessages; i++) {
+    const message = messages[messages.length - 1 - i];
+    const messageElement = document.createElement('p');
+    messageElement.textContent = message;
+    responseContainer.appendChild(messageElement);
+  }
+
+  messages = messages.slice(-maxMessages);
+});
+
 function customResponse(input) {
   // Remove special characters from input
   input = input.replace(/[^a-zA-Z0-9\s]/g, '').trim().toLowerCase();
@@ -52,7 +84,7 @@ function customResponse(input) {
       "Why did the cookie go to the doctor? It felt crumby!",
       "How does a penguin build its house? Igloos it together!",
       "Why did the chef get rid of his onions? He wanted to kill his kitchen's bad mood.",
-      "Why did the boy start doing bench presses? He had an break-up, now bench was the only thing left to press!"
+      "Why did the boy start doing bench presses? He had an break-up, now bench was the only thing left to press!",
     ];
     const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
     return randomJoke;
