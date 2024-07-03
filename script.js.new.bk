@@ -8,12 +8,11 @@ sendBtn.addEventListener('click', () => {
   const userInputValue = userInput.value.trim();
 
   if (userInputValue === '') {
-    messages.push('That is blank😅');
+    messages.push('You: ' + userInputValue + '\n-> That is blank😅');
   } else if (customResponse(userInputValue)) {
-    // If customResponse returns a truthy value, use that as the response
-    messages.push(customResponse(userInputValue));
+    messages.push('You: ' + userInputValue + '\n-> ' + customResponse(userInputValue));
   } else {
-    messages.push(userInputValue);
+    messages.push('You: ' + userInputValue + '\n-> I didn\'t understand that. Can you please rephrase?');
   }
 
   userInput.value = '';
@@ -51,8 +50,21 @@ function customResponse(input) {
   } else if (input.startsWith('hi my name is')) {
     const name = input.substring(13).trim();
     return `Hi ${name}!`;
-  } else if (input === 'tell me a story' || input === 'tell story' || input === 'tell a story' || input === 'write me a poem' || input === 'write poem' || input === 'write a poem') {
-    return 'Sorry! I can not do this at the point of time!';
+  } else if ([
+    'tell me a story',
+    'tell story',
+    'tell a story',
+    'write me a poem',
+    'write poem',
+    'write a poem',
+    'tell me a poem',
+    'tell poem',
+    'tell a poem',
+    'write me a story',
+    'write story',
+    'write a story'
+  ].includes(input)) {
+  return 'Sorry! I can not do this at the point of time!';
   } else if (input.startsWith('hello my name is')) {
     const name = input.substring(13).trim();
     return `Hi ${name}!`;
@@ -90,7 +102,5 @@ function customResponse(input) {
     ];
     const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
     return randomJoke;
-  } else {
-    return "I didn't understand that."; // default response
   }
 }
