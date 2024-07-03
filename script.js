@@ -40,6 +40,19 @@ function customResponse(input) {
       "Why did the golfer wear two pairs of pants? In case he got a hole in one.",
       "Why did the scarecrow win an award? Because he was outstanding in his field.",
       "What do you call a fake noodle? An impasta.",
+      "Why did the coffee file a police report? It got mugged!",
+      "Why did the bicycle fall over? Because it was two-tired.",
+      "What do you call a group of cows playing instruments? A moo-sical band.",
+      "Why did the banana go to the doctor? He wasn't peeling well.",
+      "Why did the chicken cross the playground? To get to the other slide.",
+      "What do you call a bear with no socks on? Barefoot.",
+      "Why did the mushroom go to the party? Because he was a fun-gi.",
+      "Why did the tomato turn red? Because it saw the salad dressing!",
+      "What do you call a pair of two friends having the similar size cup? We call them bras!",
+      "Why did the cookie go to the doctor? It felt crumby!",
+      "How does a penguin build its house? Igloos it together!",
+      "Why did the chef get rid of his onions? He wanted to kill his kitchen's bad mood.",
+      "Why did the boy start doing bench presses? He had an break-up, now bench was the only thing left to press!"
     ];
     const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
     return randomJoke;
