@@ -10,9 +10,10 @@ sendBtn.addEventListener('click', () => {
   if (userInputValue === '') {
     messages.push('That is blank😅');
   } else if (customResponse(userInputValue)) {
+    // If customResponse returns a truthy value, use that as the response
     messages.push(customResponse(userInputValue));
   } else {
-    messages.push('I didn\'t understand that. Can you please rephrase?');
+    messages.push(userInputValue);
   }
 
   userInput.value = '';
