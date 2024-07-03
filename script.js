@@ -51,7 +51,7 @@ function customResponse(input) {
   } else if (input.startsWith('hi my name is')) {
     const name = input.substring(13).trim();
     return `Hi ${name}!`;
-  } else if (input === 'tell me a story' || input === 'tell story' || input === 'tell a story' || input === 'write me a poem' || input === 'write poem' || input === 'write a poem') {
+  } else if (input === 'tell me a story' || input === 'tell story' || input === 'tell a story' || input === 'write me a poem' || input === 'write poem' || input === 'write a poem' || input === 'tell me a poem' || input === 'tell poem' || input === 'tell a poem' || input === 'write me a story' || input === 'write story' || input === 'write a story') {
     return 'Sorry! I can not do this at the point of time!';
   } else if (input.startsWith('hello my name is')) {
     const name = input.substring(13).trim();
