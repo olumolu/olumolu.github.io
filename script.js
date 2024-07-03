@@ -9,11 +9,12 @@ sendBtn.addEventListener('click', () => {
 
   if (userInputValue === '') {
     messages.push('That is blank😅');
-  } else if (customResponse(userInputValue)) {
-    // If customResponse returns a truthy value, use that as the response
-    messages.push(customResponse(userInputValue));
   } else {
-    messages.push(userInputValue);
+    customResponse(userInputValue).then(response => {
+      messages.push(response);
+    }).catch(error => {
+      console.error('Error:', error);
+    });
   }
 
   userInput.value = '';
@@ -55,7 +56,7 @@ function customResponse(input) {
     const name = input.substring(13).trim();
     return `Hi ${name}!`;
   } else if (input === 'tell me a joke' || input === 'tell joke' || input === 'tell a joke') {
-    fetch('jokes.json') // assuming your JSON file is named "jokes.json"
+    return fetch('jokes.json')
       .then(response => response.json())
       .then(data => {
         const jokes = data.jokes;
