@@ -73,17 +73,15 @@ function customResponse(input) {
         "Why did the mushroom go to the party? Because he was a fun-gi."
         "Why did the tomato turn red? Because it saw the salad dressing!",
         "What do you call a pair of two friends having the similar size cup? We call them bras!"
-    Why did the cookie go to the doctor? It felt crumby!
-    How does a penguin build its house? Igloos it together!
-Why did the chef get rid of his onions? He wanted to kill his kitchen's 
-bad mood.
-
-    
+        "Why did the cookie go to the doctor? It felt crumby!"
+        "How does a penguin build its house? Igloos it together!"
+        "Why did the chef get rid of his onions? He wanted to kill his kitchen's bad mood."
+        "Why did the boy start doing bench presses? He had an break-up, now bench was the only thing left to press!"    
       ];
       const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
       return `Here is one: ${randomJoke}`;
-  } else if (input.toLowerCase() === 'thangggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggks') {
-    return 'You\'re welcome!';
+  } else if (input.toLowerCase() === 'hey') {
+    return 'Yes please';
   } else if (input.toLowerCase().startsWith('hi my name is')) {
     const name = input.substring(13).trim();
     return `Hi ${name}!`;
