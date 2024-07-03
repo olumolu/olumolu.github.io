@@ -72,10 +72,6 @@ function customResponse(input) {
     return 'It is a round object which is used for hand exercise by pressing that object';
   } else if (input === 'what is your name') {
     return 'My name is botollama previously known as dodollama';
-  else if (input === 'how are you') {
-    return 'I\'m doing well, thanks!';
-  } else if (input === 'what is your name') {
-    return 'I don\'t have a personal name, but you can call me Assistant!';
   } else if (input === 'goodbye') {
     return 'See you later!';
   } else if (input === 'thanks') {
