@@ -52,9 +52,7 @@ function customResponse(input) {
   } else if (input.toLowerCase().startsWith('hello my name is')) {
     const name = input.substring(13).trim();
     return `Hi ${name}!`;
-  } else if (/^\d+\+\d+$/.test(input)) {
-    const [num1, num2] = input.split('+').map(Number);
-    return `The answer is ${num1 + num2}!`;
-  } 
-  return "I didn't understand that."; // default response
+  } else {
+    return "I didn't understand that."; // default response
+  }
 }
