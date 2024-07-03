@@ -103,7 +103,5 @@ function customResponse(input) {
     ];
     const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
     return randomJoke;
-  } else {
-    return "I didn't understand that."; // default response
   }
 }
