@@ -47,10 +47,12 @@ header h1 {
 .input-field input[type="text"] {
     padding: 12px;
     border: none;
-    border-radius: 8px 0 0 8px;
+    border-radius: 12px; /* rounded on all four sides */
     width: 100%;
     font-size: 16px;
+    margin-left: 2px; /* add 2px margin to the left of the text input */
 }
+
 
 /* Send button styles */
 .send-button {
@@ -61,6 +63,7 @@ header h1 {
     font-size: 16px;
     cursor: pointer;
     border-radius: 12px;
+    margin-right: 2px; /* add 2px margin to the right of the send button */
 }
 
 .send-button:hover {
