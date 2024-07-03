@@ -64,11 +64,13 @@ function customResponse(input) {
     return 'A computer program that simulates human-like conversation, using natural language processing and machine learning to understand and respond to user inputs, often used in customer service, tech support, and entertainment.';
   } else if (input === 'can you have fun') {
     return 'I don\'t but i can give response if i know about it';
-  } else if (input === 'how are you') {
+  } else if (input === 'how are you' || input === 'how are you doing') {
     return 'I\'m doing well, thanks!';
   } else if (input === 'i love you') {
     return 'i love you too!';
-  } else if (input === 'what is dodo' || input === 'dodo' || 'what is dudu' || input === 'dudu') {
+  } else if (input === 'what you know about') {
+    return 'i know many things but not that much';
+  } else if (input === 'what is dodo' || input === 'dodo' || input ==='what is dudu' || input === 'dudu') {
     return 'It is a round object which is used for hand exercise by pressing that object';
   } else if (input === 'what is your name') {
     return 'My name is botollama previously known as dodollama';
