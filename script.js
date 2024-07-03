@@ -41,7 +41,7 @@ function customResponse(input) {
   } else if (input.toLowerCase() === 'how are you') {
     return 'I\'m doing well, thanks!';
   } else if (input.toLowerCase() === 'what is your name') {
-    return 'I don\'t have a personal name, but you can call me Assistant! pleople call me ass';
+    return 'I don\'t have a personal name, but you can call me Assistant!';
   } else if (input.toLowerCase() === 'goodbye') {
     return 'See you later!';
   } else if (input.toLowerCase() === 'thanks') {
@@ -55,7 +55,6 @@ function customResponse(input) {
   } else if (/^\d+\+\d+$/.test(input)) {
     const [num1, num2] = input.split('+').map(Number);
     return `The answer is ${num1 + num2}!`;
-    else {
-    return null; // or return a default response, e.g. "I didn't understand that."
-  }
+  } 
+  return "I didn't understand that."; // default response
 }
