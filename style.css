@@ -47,7 +47,7 @@ header h1 {
 .input-field input[type="text"] {
     padding: 12px;
     border: none;
-    border-radius: 0 12px 12px 0; /* rounded on right side */
+    border-radius: 12px; /* rounded on all four sides */
     width: 100%;
     font-size: 16px;
 }
@@ -64,7 +64,7 @@ header h1 {
 }
 
 .send-button:hover {
-    background-color: #0056b3;
+    ackground-color: #0056b3;
 }
 
 /* Response area styles */
