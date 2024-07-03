@@ -31,6 +31,9 @@ sendBtn.addEventListener('click', () => {
 });
 
 function customResponse(input) {
+  // Remove special characters from input
+  input = input.replace(/[^a-zA-Z0-9\s]/g, '').trim().toLowerCase();
+  
   if (input.toLowerCase() === 'hi') {
     return 'Hello!';
   } else if (input.toLowerCase() === 'hello') {
@@ -49,7 +52,10 @@ function customResponse(input) {
   } else if (input.toLowerCase().startsWith('hello my name is')) {
     const name = input.substring(13).trim();
     return `Hi ${name}!`;
-  } else {
+  } else if (/^\d+\+\d+$/.test(input)) {
+    const [num1, num2] = input.split('+').map(Number);
+    return `The answer is ${num1 + num2}!`;
+    else {
     return null; // or return a default response, e.g. "I didn't understand that."
   }
 }
