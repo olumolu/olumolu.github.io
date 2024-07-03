@@ -22,7 +22,7 @@ function customResponse(input) {
   } else if (input.startsWith('hello my name is')) {
     const name = input.substring(13).trim();
     return `Hi ${name}!`;
-  } else if (input.includes('joke')) {
+  } else if (input === 'tell me a joke' || input === 'tell joke' || input === 'tell a joke') {
     const jokes = [
       "Why do programmers prefer dark mode? Because light attracts bugs.",
       "Why did the physicist break up with his girlfriend? He found her mass attractive, but her gravity was overwhelming.",
@@ -42,7 +42,7 @@ function customResponse(input) {
       "What do you call a fake noodle? An impasta.",
     ];
     const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
-    return randomJoke; // Return the random joke directly
+    return randomJoke;
   } else {
     return "I didn't understand that."; // default response
   }
