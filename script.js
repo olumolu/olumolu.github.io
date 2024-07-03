@@ -103,7 +103,6 @@ function customResponse(input) {
     return `Hi ${name}!`;
   } else if (input === 'tell me a joke' || input === 'tell joke' || input === 'tell a joke' || input === 'can you tell me a joke' || input === 'could you tell a joke' || input === 'could you tell me a joke' || input === 'could you tell joke' || input === 'could you tell me joke' || input === 'can you tell a joke') {
     const jokes = [
-      "Why do programmers prefer dark mode? Because light attracts bugs.",
       "Why did the physicist break up with his girlfriend? He found her mass attractive, but her gravity was overwhelming.",
       "Why did the cell go to therapy? It was feeling a little divided.",
       "Why did the math book look so sad? Because it had too many problems.",
@@ -135,5 +134,7 @@ function customResponse(input) {
     ];
     const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
     return randomJoke;
+  } else {
+    return `Sorry, I don't know the answer to that 😔`;
   }
 }
