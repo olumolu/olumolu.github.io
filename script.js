@@ -38,7 +38,41 @@ function customResponse(input) {
     return 'Hello!';
   } else if (input === 'hello') {
     return 'Hi there!';
+  } else if (input === 'what is earth') {
+    return 'The planet we live on, with air, water, and life, supporting a diverse range of ecosystems and species, with mountains, oceans, and forests.';
+  } else if (input === 'what is universe') {
+    return 'Everything that exists, including stars, galaxies, space, and time, governed by physical laws and still expanding, with mysteries waiting to be uncovered.';
+  } else if (input === 'what is linux' || input === 'linux') {
+    return 'A free and open-source computer operating system, highly customizable and widely used in devices from supercomputers to smartphones, with a large community of developers.';
+  } else if (input === 'what is human') {
+    return 'A living being with a brain, heart, and ability to think, learn, and communicate, with a complex social structure and emotions, capable of love, kindness, and creativity.';
+  } else if (input === 'what is woman' || input === 'what is girl') {
+    return 'An adult female human being, with unique characteristics, roles, and contributions to society, family, and culture, with strength, resilience, and beauty.';
+  } else if (input === 'what is moon') {
+    return 'The natural satellite that orbits around the Earth, influencing tides, stabilizing Earth\'s axis, and inspiring human imagination and exploration, with its own unique beauty and charm.';
+  } else if (input === 'what is love') {
+    return 'A strong feeling of affection, attachment, or devotion to another person, place, or thing, often characterized by feelings of warmth, tenderness, and deep caring.';
+  } else if (input === 'what is computer') {
+    return 'An electronic device that can store, process, and communicate information, performing tasks such as calculations, data storage, and communication, with various types including desktops, laptops, and mobile devices.';
+  } else if (input === 'what is internet') {
+    return 'A global system of interconnected computer networks that use the Internet Protocol to link devices worldwide, enabling communication, information sharing, and online services.';
+  } else if (input === 'what is artificial intelligence' || input === 'ai' || input === 'what is ai') {
+    return 'The development of computer systems that can perform tasks that typically require human intelligence, such as learning, problem-solving, and decision-making, with applications in areas like robotics, healthcare, and finance.';
+  } else if (input === 'what is machine learning' || input === 'ml' || input === 'what is ml') {
+    return 'A subset of artificial intelligence that involves training algorithms to learn from data and make predictions or decisions, without being explicitly programmed, with applications in areas like image recognition, natural language processing, and predictive analytics.';
+  } else if (input === 'what is chatbot') {
+    return 'A computer program that simulates human-like conversation, using natural language processing and machine learning to understand and respond to user inputs, often used in customer service, tech support, and entertainment.';
+  } else if (input === 'can you have fun') {
+    return 'I don\'t but i can give response if i know about it';
   } else if (input === 'how are you') {
+    return 'I\'m doing well, thanks!';
+  } else if (input === 'i love you') {
+    return 'i love you too!';
+  } else if (input === 'what is dodo' || input === 'dodo' || 'what is dudu' || input === 'dudu') {
+    return 'It is a round object which is used for hand exercise by pressing that object';
+  } else if (input === 'what is your name') {
+    return 'My name is botollama previously known as dodollama';
+  else if (input === 'how are you') {
     return 'I\'m doing well, thanks!';
   } else if (input === 'what is your name') {
     return 'I don\'t have a personal name, but you can call me Assistant!';
