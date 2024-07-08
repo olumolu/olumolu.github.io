@@ -1,0 +1,26 @@
+const userInput = document.getElementById('user-input');
+const sendButton = document.getElementById('send-btn');
+const responseContainer = document.getElementById('response-container');
+
+sendButton.addEventListener('click', async () => {
+  const userInputValue = userInput.value.trim();
+  if (userInputValue !== '') {
+    try {
+      const response = await fetch('https://api.together.ai/v1/converse', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ input: userInputValue }),
+      });
+
+      const responseData = await response.json();
+      const responseText = responseData.response;
+      const responseHTML = `<p class="response-text">${responseText}</p>`;
+      responseContainer.innerHTML += responseHTML;
+      userInput.value = '';
+    } catch (error) {
+      console.error(error);
+    }
+  }
+});
