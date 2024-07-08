@@ -84,7 +84,7 @@ function customResponse(input) {
   } else if (input === 'what is dodo' || input === 'dodo' || input ==='what is dudu' || input === 'dudu') {
     return 'It is a round object which is used for hand exercise by pressing that object';
   } else if (input === 'what is your name') {
-    return 'My name is botollama previously known as dodollama';
+    return 'i don\'t have a name it is a basic preprogramed chatbot;
   } else if (input === 'goodbye') {
     return 'See you later!';
   } else if (input === 'thanks') {
@@ -108,10 +108,7 @@ function customResponse(input) {
     'write story',
     'write a story'
   ].includes(input)) {
-  return 'Sorry! I can not do this at the point of time!';
-  } else if (input.startsWith('hello my name is')) {
-    const name = input.substring(13).trim();
-    return `Hi ${name}!`;
+    return 'Sorry! I can not do this at the point of time!';
   } else if (input === 'tell me a joke' || input === 'tell joke' || input === 'tell a joke' || input === 'can you tell me a joke' || input === 'could you tell a joke' || input === 'could you tell me a joke' || input === 'could you tell joke' || input === 'could you tell me joke' || input === 'can you tell a joke') {
     const jokes = [
       "Why did the physicist break up with his girlfriend? He found her mass attractive, but her gravity was overwhelming.",
