@@ -22,6 +22,21 @@ sendBtn.addEventListener('click', () => {
     messages.push(`<span style="color: #2ecc71">You: ${userInputValue}</span>`); // Question in fresh green
   }
 
+            /* Color Palettes
+            Contrasting Colors: Q: #3498db (bright blue) -> R: #f1c40f (warm orange)
+            Nature-Inspired: Q: #2ecc71 (fresh green) -> R: #9b59b6 (rich purple)
+            Monochromatic: Q: #4CAF50 (deep green) -> R: #8BC34A (lighter green)
+            Bold and Bright: Q: #FF69B4 (vibrant pink) -> R: #33CC33 (bright green)
+            Neutral and Calming: Q: #666666 (dark gray) -> R: #999999 (light gray)
+            Tech-Inspired: Q: #2196F3 (deep blue) -> R: #FFC107 (bright yellow-orange)
+            Vibrant Duo: Q: #8F0A1A (deep red) -> R: #34C759 (bright lime green)
+            Sunset Hues: Q: #FFA07A (warm orange) -> R: #FFC67D (soft yellow)
+            Electric Dreams: Q: #9B59B6 (rich purple) -> R: #66D9EF (bright teal)
+            Fruit Salad: Q: #FFC67D (soft yellow) -> R: #8BC34A (bright green)
+            Glowing Embers: Q: #FF9900 (vibrant orange) -> R: #FF69B4 (bright pink)
+            Ocean Breeze: Q: #3498db (bright blue) -> R: #2ecc71 (fresh green)
+            Retro Futurism: Q: #FFC107 (bright yellow-orange) -> R: #2196F3 (deep blue) */
+
   userInput.value = '';
 
   responseContainer.innerHTML = '';
