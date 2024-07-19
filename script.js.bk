@@ -160,21 +160,21 @@ function customResponse(input) {
     return 'You\'re welcome!';
   } else if (input === 'hey') {
     return 'Yes please';
-  } else if (input === 'what is your favorite color'){
+  } else if (input === 'what is your favorite color') {
     return 'I don\'t have personal preferences, but I can tell you about popular colors!';
-  } else if (input === 'where are you from'){
+  } else if (input === 'where are you from') {
     return 'I exist on the internet, so I don\'t have a physical location.';
-  } else if (input === 'what can you do'){ 
+  } else if (input === 'what can you do') { 
     return 'I can answer questions, tell jokes, and provide information on various topics. Feel free to ask me anything!';
-  } else if (input === 'how old are you'){
+  } else if (input === 'how old are you') {
     return 'I don\'t have an age, as I am a computer program created to assist you.';
-  } else if (input === 'what is the time'){ 
+  } else if (input === 'what is the time') { 
     return 'I don\'t have access to real-time information, so I cannot tell you the current time.';
-  } else if (input === 'what is the date'){
+  } else if (input === 'what is the date') {
     return 'I don\'t have access to real-time information, so I cannot tell you the current date.';
-  } else if (input === 'what is the weather like'){ 
+  } else if (input === 'what is the weather like') { 
     return 'I don\'t have access to real-time data, so I cannot provide weather updates.';
-  } else if (input === 'what is the meaning of life'){
+  } else if (input === 'what is the meaning of life') {
     return 'The meaning of life is a philosophical question with many interpretations, often relating to personal fulfillment and happiness.';
   } else if (input.startsWith('hi my name is')) {
     const name = input.substring(13).trim();
