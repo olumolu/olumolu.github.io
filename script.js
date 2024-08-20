@@ -68,6 +68,7 @@ function customResponse(input) {
 const responses = {
   'hi': 'Hello!',
   'hello': 'Hi there!',
+  'tell me the name of prime minister of india': ' Narendra Damodar das modi'q
   'what is earth': 'The planet we live on, with air, water, and life, supporting a diverse range of ecosystems and species, with mountains, oceans, and forests.',
   'what is universe': 'Everything that exists, including stars, galaxies, space, and time, governed by physical laws and still expanding, with mysteries waiting to be uncovered.',
   'what is linux': 'A free and open-source computer operating system, highly customizable and widely used in devices from supercomputers to smartphones, with a large community of developers.',
