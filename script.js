@@ -68,6 +68,7 @@ function customResponse(input) {
 const responses = {
   'hi': 'Hello!',
   'hello': 'Hi there!',
+  'who is the prime minister of india
   'tell me the name of prime minister of india': ' Narendra Damodar das modi.',
   'what is earth': 'The planet we live on, with air, water, and life, supporting a diverse range of ecosystems and species, with mountains, oceans, and forests.',
   'what is universe': 'Everything that exists, including stars, galaxies, space, and time, governed by physical laws and still expanding, with mysteries waiting to be uncovered.',
@@ -109,21 +110,6 @@ const responses = {
   'what is the weather like': 'I don\'t have access to real-time data, so I cannot provide weather updates.',
   'what is the meaning of life': 'The meaning of life is a philosophical question with many interpretations, often relating to personal fulfillment and happiness.',
 };
-
-const storyPoemRequests = [
-  'tell me a story',
-  'tell story',
-  'tell a story',
-  'write me a poem',
-  'write poem',
-  'write a poem',
-  'tell me a poem',
-  'tell poem',
-  'tell a poem',
-  'write me a story',
-  'write story',
-  'write a story'
-];
 
 const jokeRequests = [
   'tell me a joke',
@@ -170,10 +156,6 @@ const jokes = [
 
 function customResponse(input) {
   input = input.replace(/[^a-zA-Z0-9\s]/g, '').trim().toLowerCase();
-  
-  if (storyPoemRequests.includes(input)) {
-    return 'Sorry! I cannot do this at the point of time!';
-  }
   
   if (jokeRequests.includes(input)) {
     const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
